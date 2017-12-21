@@ -60,7 +60,7 @@ class Api extends \Module\Base
         $accessToken = $this->getAccessToken();
         $url = "https://api.weixin.qq.com/cgi-bin/user/info";
         $url .= "?access_token={$accessToken}&openid={$openid}&lang=zh_CN";
-        $result = $this->request($url, '', 'get');
+        $result = \Util\Requset::curlRequest($url, '', 'get');
         if (empty($result['errcode'])) {
             $userInfo = $result;
         }

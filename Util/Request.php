@@ -21,7 +21,7 @@ class Requset
      * 
      * @return string
      */
-    public static function curlRequest($url, $params, $type = 'get', $errorReport = true)
+    public static function curlRequest($url, $params = "", $type = 'get', $errorReport = true)
     {
         for ($i = 0; $i < 3; ++$i) {
             try {
